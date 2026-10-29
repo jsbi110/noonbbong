@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashing Background</title>
+    <style>
+        /* 화면 전체를 채우는 배경 스타일 설정 */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #000000;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // 현재 배경 상태 (true: 검은색, false: 흰색)
+        let isBlack = true;
+
+        // 0.05초 (50밀리초)마다 배경색을 토글
+        setInterval(() => {
+            if (isBlack) {
+                document.body.style.backgroundColor = '#FFFFFF';
+            } else {
+                document.body.style.backgroundColor = '#000000';
+            }
+            isBlack = !isBlack;
+        }, 50);
+    </script>
+</body>
+</html>
